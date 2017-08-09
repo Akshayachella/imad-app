@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var content = {
+var articleOne = {
     title: 'Article One ! Akshaya C',
     heading:'Article One',
     date: '9 August 2017',
@@ -19,6 +19,40 @@ var content = {
                     This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
                 </p>`
 };
+
+
+var htmlTemplate = `<html>
+    <head>
+        <title> 
+            s{title}
+        </title>
+        <meta name="viewport" content="width-device-width, initial-scale=1"/>
+         <link href="/ui/style.css" rel="stylesheet" />
+        
+    </head>
+    
+    <body>
+        <div class="container">
+            <div>
+               <a href="/"> Home </a>
+            </div>
+            <hr/>
+            <h3> 
+                s{heading}
+            </h3>
+            <div>
+                s{date}
+            </div>
+            <div>
+            s{content}
+            </div>
+        </div>
+    </body>
+    
+</html>
+`;
+
+
 
 
 
