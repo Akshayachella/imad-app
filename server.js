@@ -50,7 +50,7 @@ function createTemplate (data){
     </html>
  `;
  
- 
+}
         
 
 app.get('/article-two', function(req,res){
