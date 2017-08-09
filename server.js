@@ -21,14 +21,19 @@ var articles{
                         This is the content for my first article.This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
                     </p>`
     },
-    var articleTwo = { title: 'Article Two ! Akshaya C',
+    var articleTwo :{ title: 'Article Two ! Akshaya C',
         heading:'Article Two',
         date: '10 August 2017',
         content:`<p>
                         This is the content for my second article.
                     </p>`
     },
-    var articleThree = {}
+    var articleThree:{ title: 'Article Three ! Akshaya C',
+        heading:'Article Three',
+        date: '11 August 2017',
+        content:`<p>
+                        This is the content for my third article.
+                    </p>`
 };
 
 function createTemplate (data){
