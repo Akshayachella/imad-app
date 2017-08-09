@@ -20,50 +20,38 @@ var articleOne = {
                 </p>`
 };
 
-
-var htmlTemplate = `<html>
-    <head>
-        <title> 
-            s{title}
-        </title>
-        <meta name="viewport" content="width-device-width, initial-scale=1"/>
-         <link href="/ui/style.css" rel="stylesheet" />
+function createTemplate (data){
+ var htmlTemplate = `
+     <html>
+        <head>
+            <title> 
+                s{title}
+            </title>
+            <meta name="viewport" content="width-device-width, initial-scale=1"/>
+             <link href="/ui/style.css" rel="stylesheet" />
+            
+        </head>
         
-    </head>
-    
-    <body>
-        <div class="container">
-            <div>
-               <a href="/"> Home </a>
+        <body>
+            <div class="container">
+                <div>
+                   <a href="/"> Home </a>
+                </div>
+                <hr/>
+                <h3> Article One </h3>
+                <div>
+                    9 August 2017
+                </div>
+                <div>
+                     s{content}
+                </div>
             </div>
-            <hr/>
-            <h3> 
-                s{heading}
-            </h3>
-            <div>
-                s{date}
-            </div>
-            <div>
-            s{content}
-            </div>
-        </div>
-    </body>
-    
-</html>
-`;
-
-
-
-
-
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
-app.get('/article-one', function(req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-});
+        </body>
+    </html>
+ `;
+ 
+ 
+        
 
 app.get('/article-two', function(req,res){
 res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
