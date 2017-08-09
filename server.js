@@ -5,6 +5,16 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var content = {
+    title: 'Article One ! Akshaya C',
+    heading:'Article One',
+    date: '9 August 2017',
+    content:
+};
+
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
