@@ -53,11 +53,9 @@ function createTemplate (data){
         </body>
     </html>
  `;
- 
-}
 
 return htmlTemplate;        
-
+}
 app.get('/article-two', function(req,res){
 res.send(createTemplate(articleOne));
 });
